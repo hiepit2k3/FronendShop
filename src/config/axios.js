@@ -3,7 +3,7 @@ import { loginSuccess } from "../redux/features/authSlice";
 import store from "../redux/store";
 
 const instance = axios.create({
-  baseURL: "https://apishop-4b364ab6f1c1.herokuapp.com",
+  baseURL: "https://apishop-4b364ab6f1c1.herokuapp.com/api/shop",
 });
 
 instance.interceptors.request.use(
@@ -29,7 +29,7 @@ instance.interceptors.response.use(
     ) {
       try {
         const response = await axios.post(
-          "http://localhost:8080/api/ttf/auth/refresh-token",
+          "https://apishop-4b364ab6f1c1.herokuapp.com/api/shop/auth/refresh-token",
           {
             refreshToken,
           }

@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { loginSuccess, logout } from "../features/authSlice";
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: "https://apishop-4b364ab6f1c1.herokuapp.com",
+  baseUrl: "https://apishop-4b364ab6f1c1.herokuapp.com/api/shop",
   prepareHeaders: (headers, { getState }) => {
     const token = getState().auth.userToken;
     if (token) {
