@@ -1,0 +1,66 @@
+/* .image:hover img {
+  transform: scale(1.1);
+  transition: transform 0.9s ease;
+} */
+
+.image {
+  position: relative;
+}
+
+.image-border::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 400px;
+  height: 100%;
+  border: 3px solid #ccc;
+  bottom: -21px;
+  left: -21px;
+}
+
+.image-border2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 400px;
+  height: 100%;
+  border: 3px solid #ccc;
+  bottom: -21px;
+  right: -21px;
+}
+
+.img {
+  width: 400px;
+  height: 400px;
+  background-size: cover;
+  background-image: url("../images/about.jpg");
+  overflow: hidden;
+  background-position: center;
+}
+
+.img2 {
+  width: 400px;
+  height: 400px;
+  background-size: cover;
+  background-image: url("../images/about-02.jpg");
+  overflow: hidden;
+  background-position: center;
+}
+
+.img2:hover,
+.img:hover {
+  /* background-size: 120% 120%; */
+  animation: imageHover 0.9s ease-in-out;
+  /* tra */
+}
+
+@keyframes imageHover {
+  from {
+    background-size: 100% 100%;
+  }
+  to {
+    background-size: 120% 120%;
+  }
+}
