@@ -3,7 +3,7 @@ import { loginSuccess } from "../redux/features/authSlice";
 import store from "../redux/store";
 
 const instance = axios.create({
-  baseURL: "http://localhost:8080/api/shop",
+  baseURL: "https://apishop-4b364ab6f1c1.herokuapp.com",
 });
 
 instance.interceptors.request.use(
